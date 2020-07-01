@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class LinearSearchExample
+{
+public static void main(String args[])
+{
+int counter, num, item, array[];
+//To capture user input
+Scanner input = new Scanner(System.in);
+System.out.println(&quot;Enter number of elements:&quot;);
+num = input.nextInt();
+//Creating array to store the all the numbers
+array = new int[num];
+System.out.println(&quot;Enter &quot; + num + &quot; integers&quot;);
+//Loop to store each numbers in array
+for (counter = 0; counter &lt; num; counter++)
+array[counter] = input.nextInt();
+System.out.println(&quot;Enter the search value:&quot;);
+item = input.nextInt();
+for (counter = 0; counter &lt; num; counter++)
+{
+if (array[counter] == item)
+{
+System.out.println(item+&quot; is present at location &quot;+(counter+1));
+/*Item is found so to stop the search and to come out of the
+* loop use break statement.*/
+
+break;
+}
+}
+if (counter == num)
+System.out.println(item + &quot; doesn&#39;t exist in array.&quot;);
+}
+}
